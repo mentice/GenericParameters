@@ -1,6 +1,6 @@
 add_library(GenericParameters INTERFACE)
 
-target_sources(GenericParameters INTERFACE 
+target_sources(GenericParameters INTERFACE
 	${CMAKE_CURRENT_LIST_DIR}/Parameter.h
 	${CMAKE_CURRENT_LIST_DIR}/EnumParameter.h
 	${CMAKE_CURRENT_LIST_DIR}/NumericParameter.h
@@ -8,8 +8,8 @@ target_sources(GenericParameters INTERFACE
 	${CMAKE_CURRENT_LIST_DIR}/VectorParameter.h
 	)
 
+target_include_directories(GenericParameters INTERFACE .)
 
 install(DIRECTORY ./
 DESTINATION include
 FILES_MATCHING PATTERN "*.h")
-	
